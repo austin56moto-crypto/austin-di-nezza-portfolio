@@ -9,13 +9,47 @@ import { SkillsGrid } from "@/components/skills-grid";
 import { StatsStrip } from "@/components/stats-strip";
 import { TimelineBlock } from "@/components/timeline-block";
 import { education, experiences, siteConfig } from "@/data/profile";
+import { getPortfolioProjects } from "@/lib/github";
+import { formatRelativeMonth } from "@/lib/utils";
 import { SectionHeading } from "@/components/section-heading";
+import type { Stat } from "@/types";
 
-export default function Home() {
+export default async function Home() {
+  const projects = await getPortfolioProjects();
+  const liveProjects = projects.filter((project) => !project.fork);
+  const latestProject = liveProjects[0];
+  const featuredCount = liveProjects.filter((project) => project.featured).length;
+  const categoryCount = new Set(liveProjects.map((project) => project.category)).size;
+
+  const dynamicStats: Stat[] = [
+    {
+      label: "Live Repositories",
+      value: `${liveProjects.length}`,
+      detail: "Public GitHub repositories are available through the backend-driven project explorer.",
+    },
+    {
+      label: "Featured Builds",
+      value: `${featuredCount}`,
+      detail: "Priority projects are curated with stronger summaries, categories, and employer-facing takeaways.",
+    },
+    {
+      label: "Latest Update",
+      value: latestProject ? formatRelativeMonth(latestProject.updatedAt) : "Live",
+      detail: latestProject
+        ? `Most recent public repo activity: ${latestProject.displayName}.`
+        : "Recent public work surfaces automatically once it lands on GitHub.",
+    },
+    {
+      label: "Coverage",
+      value: `${categoryCount}+`,
+      detail: "The current project mix spans AI, data, backend, cloud, expert systems, and frontend work.",
+    },
+  ];
+
   return (
     <>
-      <HeroSection />
-      <StatsStrip />
+      <HeroSection projects={liveProjects} />
+      <StatsStrip stats={dynamicStats} />
       <AboutSnapshot />
       <ExpertiseGrid />
       <EmployerValueSection />

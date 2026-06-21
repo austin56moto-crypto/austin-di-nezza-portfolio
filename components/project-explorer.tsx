@@ -92,6 +92,9 @@ export function ProjectExplorer({
     filtered = filtered.slice(0, 6);
   }
 
+  const latestProject = filtered[0];
+  const featuredCount = projects.filter((project) => project.featured && !project.fork).length;
+
   return (
     <section className="px-5 py-16 sm:px-8">
       <div className="mx-auto w-full max-w-7xl">
@@ -124,7 +127,7 @@ export function ProjectExplorer({
             </div>
           </div>
 
-          <div className="mt-4 grid gap-3 lg:grid-cols-[1fr_180px_180px]">
+          <div className="mt-4 grid gap-3 xl:grid-cols-[1fr_180px_180px_220px]">
             <select
               value={language}
               onChange={(event) => setLanguage(event.target.value)}
@@ -147,6 +150,9 @@ export function ProjectExplorer({
             </select>
             <div className="rounded-3xl border border-cyan-400/25 bg-cyan-400/10 px-4 py-3 text-sm text-cyan-100">
               {projects.length} repos available
+            </div>
+            <div className="rounded-3xl border border-white/10 bg-white/[0.03] px-4 py-3 text-sm text-slate-200">
+              {featuredCount} featured · {latestProject ? `updated ${latestProject.displayName}` : "live sync"}
             </div>
           </div>
         </div>

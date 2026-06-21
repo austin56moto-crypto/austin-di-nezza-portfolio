@@ -29,6 +29,7 @@ body {
   background: transparent;
   color: var(--foreground);
   font-family: var(--font-manrope), sans-serif;
+  overflow-x: hidden;
 }
 
 a {
@@ -57,12 +58,70 @@ a {
 }
 
 .panel {
+  position: relative;
   border: 1px solid var(--panel-border);
   background: linear-gradient(180deg, rgba(15, 23, 42, 0.72), rgba(9, 14, 27, 0.82));
   border-radius: 1.75rem;
   box-shadow:
     0 0 0 1px rgba(255, 255, 255, 0.02) inset,
     0 20px 60px rgba(2, 8, 23, 0.4);
+  transition:
+    transform 220ms ease,
+    border-color 220ms ease,
+    box-shadow 220ms ease;
+}
+
+.panel-interactive:hover {
+  transform: translateY(-4px);
+  border-color: rgba(103, 232, 249, 0.2);
+  box-shadow:
+    0 0 0 1px rgba(125, 211, 252, 0.05) inset,
+    0 25px 80px rgba(2, 8, 23, 0.5);
+}
+
+.hero-panel {
+  backdrop-filter: blur(28px);
+}
+
+.hero-orb {
+  position: absolute;
+  border-radius: 999px;
+  filter: blur(30px);
+  opacity: 0.8;
+  pointer-events: none;
+  animation: drift 16s ease-in-out infinite;
+}
+
+.hero-orb-left {
+  top: 4rem;
+  left: -8rem;
+  height: 18rem;
+  width: 18rem;
+  background: radial-gradient(circle, rgba(34, 211, 238, 0.18), transparent 65%);
+}
+
+.hero-orb-right {
+  top: 5rem;
+  right: -7rem;
+  height: 15rem;
+  width: 15rem;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.18), transparent 65%);
+  animation-delay: -4s;
+}
+
+.hero-scanline {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(125, 211, 252, 0.08) 45%,
+    transparent 55%,
+    transparent 100%
+  );
+  animation: scanline 7s linear infinite;
+  mix-blend-mode: screen;
 }
 
 h1,
@@ -77,4 +136,23 @@ h6 {
 ::selection {
   background: rgba(34, 211, 238, 0.3);
   color: white;
+}
+
+@keyframes drift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(0, 18px, 0) scale(1.06);
+  }
+}
+
+@keyframes scanline {
+  0% {
+    transform: translateY(-105%);
+  }
+  100% {
+    transform: translateY(105%);
+  }
 }
