@@ -59,6 +59,7 @@ export type ProjectOverride = {
   category?: string;
   tech?: string[];
   featured?: boolean;
+  hidden?: boolean;
   priority?: number;
   employerValue?: string;
   status?: string;

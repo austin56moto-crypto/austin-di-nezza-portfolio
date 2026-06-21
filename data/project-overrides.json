@@ -98,5 +98,8 @@
     "priority": 9,
     "status": "Mobile Build",
     "employerValue": "Shows adaptability across stacks and willingness to build beyond a single technology lane."
+  },
+  "austin-di-nezza-portfolio": {
+    "hidden": true
   }
 }

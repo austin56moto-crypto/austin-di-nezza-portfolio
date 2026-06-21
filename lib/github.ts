@@ -133,20 +133,14 @@ export async function getPortfolioProjects() {
 
   return sourceRepos
     .map(normalizeRepo)
-    .sort((a, b) => {
-      if (a.featured !== b.featured) {
-        return Number(b.featured) - Number(a.featured);
-      }
-
-      if (a.priority !== b.priority) {
-        return a.priority - b.priority;
-      }
-
-      return new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime();
-    });
+    .filter((project) => !projectOverrides[project.name]?.hidden)
+    .sort((a, b) => new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime());
 }
 
 export async function getFeaturedProjects(limit = 6) {
   const projects = await getPortfolioProjects();
-  return projects.filter((project) => project.featured).slice(0, limit);
+  return projects
+    .filter((project) => project.featured)
+    .sort((a, b) => a.priority - b.priority)
+    .slice(0, limit);
 }
