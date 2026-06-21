@@ -58,12 +58,11 @@ export default async function Home() {
             <SectionHeading
               eyebrow="Assistant"
               title="A simpler portfolio Q&A for quick hiring questions."
-              description="This section is meant to answer practical questions about projects, backend experience, cloud knowledge, studies, and contact details without the over-produced AI demo vibe."
+              description="Ask a direct question and get a short answer based on the portfolio, CV, and live GitHub projects."
             />
             <div className="mt-6 panel p-6">
               <p className="text-sm leading-7 text-slate-300">
-                It now answers from portfolio content and live project data, with direct references so
-                the responses feel grounded instead of vague.
+                It is intentionally simple now: quick portfolio answers without the extra AI-demo clutter.
               </p>
               <p className="mt-4 text-sm leading-7 text-slate-300">
                 Contact email: <span className="text-white">{siteConfig.email}</span>

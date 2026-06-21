@@ -11,7 +11,7 @@ export default function ContactPage() {
           <SectionHeading
             eyebrow="Contact"
             title="For roles, internships, collaborations, or project conversations."
-            description="This first version includes a validated contact form, direct email and profile links, and a rule-based assistant for quick portfolio questions."
+            description="Reach out directly, use the contact form, or ask a quick portfolio question below."
           />
           <div className="mt-6 panel p-6">
             <div className="space-y-4 text-sm leading-7 text-slate-300">

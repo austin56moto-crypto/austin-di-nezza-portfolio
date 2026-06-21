@@ -11,6 +11,8 @@ import { cn } from "@/lib/utils";
 export function Navbar() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const navItemClass =
+    "inline-flex items-center rounded-full border border-white/10 bg-slate-900/80 px-4 py-2 text-sm text-slate-200 transition hover:bg-slate-800 hover:text-white";
 
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-slate-950/96 backdrop-blur-xl">
@@ -36,10 +38,10 @@ export function Navbar() {
                 key={link.href}
                 href={link.href}
                 className={cn(
-                  "rounded-full px-4 py-2 text-sm transition",
+                  navItemClass,
                   active
-                    ? "bg-white text-slate-950"
-                    : "text-slate-300 hover:bg-white/5 hover:text-white",
+                    ? "border-slate-300/20 bg-slate-800 text-white"
+                    : "",
                 )}
               >
                 {link.label}
@@ -51,7 +53,7 @@ export function Navbar() {
         <div className="hidden items-center gap-3 lg:flex">
           <Link
             href="/cv"
-            className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white px-4 py-2 text-sm font-medium text-slate-950 transition hover:bg-slate-200"
+            className={cn(navItemClass, "gap-2 font-medium")}
           >
             <Download className="h-4 w-4" />
             Download CV
@@ -77,10 +79,10 @@ export function Navbar() {
                 href={link.href}
                 onClick={() => setOpen(false)}
                 className={cn(
-                  "rounded-2xl px-4 py-3 text-sm transition",
+                  "rounded-2xl border border-white/10 bg-slate-900/80 px-4 py-3 text-sm text-slate-200 transition hover:bg-slate-800 hover:text-white",
                   pathname === link.href
-                    ? "bg-white text-slate-950"
-                    : "text-slate-300 hover:bg-white/5 hover:text-white",
+                    ? "border-slate-300/20 bg-slate-800 text-white"
+                    : "",
                 )}
               >
                 {link.label}
@@ -89,7 +91,7 @@ export function Navbar() {
             <Link
               href="/cv"
               onClick={() => setOpen(false)}
-              className="mt-2 inline-flex items-center justify-center gap-2 rounded-2xl border border-white/10 bg-white px-4 py-3 text-sm font-medium text-slate-950"
+              className="mt-2 inline-flex items-center justify-center gap-2 rounded-2xl border border-white/10 bg-slate-900/80 px-4 py-3 text-sm font-medium text-slate-200 transition hover:bg-slate-800 hover:text-white"
             >
               <Download className="h-4 w-4" />
               Download CV
