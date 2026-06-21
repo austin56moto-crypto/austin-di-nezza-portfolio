@@ -9,7 +9,7 @@ type ProjectCardProps = {
 
 export function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <article className="panel panel-interactive flex h-full flex-col p-6">
+    <article className="panel flex h-full flex-col p-6">
       <div className="flex items-start justify-between gap-4">
         <div>
           <div className="flex flex-wrap gap-2">

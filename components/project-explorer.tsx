@@ -101,7 +101,7 @@ export function ProjectExplorer({
         <SectionHeading eyebrow="Projects" title={title} description={description} />
         <div className="mt-8 panel p-5 sm:p-6">
           <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
-            <div className="flex flex-1 items-center gap-3 rounded-3xl border border-white/10 bg-white/[0.03] px-4 py-3">
+            <div className="flex flex-1 items-center gap-3 rounded-3xl border border-white/10 bg-white/[0.02] px-4 py-3">
               <Search className="h-4 w-4 text-slate-400" />
               <input
                 value={search}
@@ -111,11 +111,11 @@ export function ProjectExplorer({
               />
             </div>
             <div className="flex flex-wrap gap-3">
-              <div className="inline-flex items-center gap-2 rounded-3xl border border-white/10 bg-white/[0.03] px-4 py-3 text-sm text-slate-300">
-                <SlidersHorizontal className="h-4 w-4 text-cyan-300" />
+              <div className="inline-flex items-center gap-2 rounded-3xl border border-white/10 bg-white/[0.02] px-4 py-3 text-sm text-slate-300">
+                <SlidersHorizontal className="h-4 w-4 text-slate-300" />
                 Live sync from GitHub
               </div>
-              <label className="inline-flex items-center gap-2 rounded-3xl border border-white/10 bg-white/[0.03] px-4 py-3 text-sm text-slate-300">
+              <label className="inline-flex items-center gap-2 rounded-3xl border border-white/10 bg-white/[0.02] px-4 py-3 text-sm text-slate-300">
                 <input
                   type="checkbox"
                   checked={showForks}
@@ -148,10 +148,10 @@ export function ProjectExplorer({
               <option value="name">Name</option>
               <option value="stars">Stars</option>
             </select>
-            <div className="rounded-3xl border border-cyan-400/25 bg-cyan-400/10 px-4 py-3 text-sm text-cyan-100">
+            <div className="rounded-3xl border border-white/10 bg-white/[0.02] px-4 py-3 text-sm text-slate-200">
               {projects.length} repos available
             </div>
-            <div className="rounded-3xl border border-white/10 bg-white/[0.03] px-4 py-3 text-sm text-slate-200">
+            <div className="rounded-3xl border border-white/10 bg-white/[0.02] px-4 py-3 text-sm text-slate-200">
               {featuredCount} featured · {latestProject ? `updated ${latestProject.displayName}` : "live sync"}
             </div>
           </div>

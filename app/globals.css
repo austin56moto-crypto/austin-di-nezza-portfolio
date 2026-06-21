@@ -1,10 +1,10 @@
 @import "tailwindcss";
 
 :root {
-  --background: #06111f;
-  --foreground: #e8f3ff;
-  --panel: rgba(10, 24, 43, 0.8);
-  --panel-border: rgba(148, 163, 184, 0.16);
+  --background: #0f172a;
+  --foreground: #e5e7eb;
+  --panel: rgba(15, 23, 42, 0.82);
+  --panel-border: rgba(148, 163, 184, 0.14);
 }
 
 @theme inline {
@@ -19,9 +19,7 @@
 }
 
 html {
-  background:
-    radial-gradient(circle at top, rgba(34, 211, 238, 0.12), transparent 34%),
-    linear-gradient(180deg, #07111f 0%, #091627 50%, #050b14 100%);
+  background: linear-gradient(180deg, #0f172a 0%, #111827 100%);
 }
 
 body {
@@ -40,10 +38,7 @@ a {
 .app-shell {
   position: relative;
   min-height: 100vh;
-  background:
-    radial-gradient(circle at 10% 15%, rgba(34, 211, 238, 0.11), transparent 25%),
-    radial-gradient(circle at 90% 10%, rgba(56, 189, 248, 0.1), transparent 24%),
-    linear-gradient(180deg, rgba(6, 17, 31, 0.96), rgba(4, 10, 21, 1));
+  background: linear-gradient(180deg, #0f172a 0%, #111827 100%);
 }
 
 .grid-overlay {
@@ -51,20 +46,20 @@ a {
   inset: 0;
   pointer-events: none;
   background-image:
-    linear-gradient(rgba(148, 163, 184, 0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(148, 163, 184, 0.08) 1px, transparent 1px);
-  background-size: 56px 56px;
-  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.85), transparent 90%);
+    linear-gradient(rgba(148, 163, 184, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 184, 0.04) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.5), transparent 92%);
 }
 
 .panel {
   position: relative;
   border: 1px solid var(--panel-border);
-  background: linear-gradient(180deg, rgba(15, 23, 42, 0.72), rgba(9, 14, 27, 0.82));
+  background: linear-gradient(180deg, rgba(17, 24, 39, 0.86), rgba(15, 23, 42, 0.92));
   border-radius: 1.75rem;
   box-shadow:
     0 0 0 1px rgba(255, 255, 255, 0.02) inset,
-    0 20px 60px rgba(2, 8, 23, 0.4);
+    0 18px 45px rgba(2, 8, 23, 0.28);
   transition:
     transform 220ms ease,
     border-color 220ms ease,
@@ -72,24 +67,19 @@ a {
 }
 
 .panel-interactive:hover {
-  transform: translateY(-4px);
-  border-color: rgba(103, 232, 249, 0.2);
+  transform: translateY(-2px);
+  border-color: rgba(226, 232, 240, 0.18);
   box-shadow:
-    0 0 0 1px rgba(125, 211, 252, 0.05) inset,
-    0 25px 80px rgba(2, 8, 23, 0.5);
+    0 0 0 1px rgba(255, 255, 255, 0.03) inset,
+    0 22px 60px rgba(2, 8, 23, 0.32);
 }
 
 .hero-panel {
-  backdrop-filter: blur(28px);
+  backdrop-filter: blur(20px);
 }
 
 .hero-orb {
-  position: absolute;
-  border-radius: 999px;
-  filter: blur(30px);
-  opacity: 0.8;
-  pointer-events: none;
-  animation: drift 16s ease-in-out infinite;
+  display: none;
 }
 
 .hero-orb-left {
@@ -110,18 +100,7 @@ a {
 }
 
 .hero-scanline {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background: linear-gradient(
-    180deg,
-    transparent 0%,
-    rgba(125, 211, 252, 0.08) 45%,
-    transparent 55%,
-    transparent 100%
-  );
-  animation: scanline 7s linear infinite;
-  mix-blend-mode: screen;
+  display: none;
 }
 
 h1,
@@ -136,23 +115,4 @@ h6 {
 ::selection {
   background: rgba(34, 211, 238, 0.3);
   color: white;
-}
-
-@keyframes drift {
-  0%,
-  100% {
-    transform: translate3d(0, 0, 0) scale(1);
-  }
-  50% {
-    transform: translate3d(0, 18px, 0) scale(1.06);
-  }
-}
-
-@keyframes scanline {
-  0% {
-    transform: translateY(-105%);
-  }
-  100% {
-    transform: translateY(105%);
-  }
 }

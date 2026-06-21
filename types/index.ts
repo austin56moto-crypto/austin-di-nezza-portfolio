@@ -86,3 +86,9 @@ export type Project = {
   screenshot?: string;
   employerValue: string;
 };
+
+export type ChatbotReply = {
+  answer: string;
+  references: string[];
+  suggestedQuestions: string[];
+};

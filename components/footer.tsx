@@ -14,15 +14,15 @@ export function Footer() {
     <footer className="border-t border-white/10 bg-slate-950">
       <div className="mx-auto grid w-full max-w-7xl gap-10 px-5 py-12 sm:px-8 lg:grid-cols-[1.4fr_1fr_1fr]">
         <div>
-          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-cyan-300">
+          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-300">
             Austin Di Nezza
           </p>
           <h2 className="mt-3 text-2xl font-semibold text-white">
-            Employer-ready portfolio with live GitHub project sync.
+            Professional portfolio with live GitHub project sync.
           </h2>
           <p className="mt-4 max-w-xl text-sm leading-7 text-slate-400">
-            Built to present practical AI, automation, data, backend, and workflow-oriented
-            project work in a polished format that can keep up with new GitHub pushes.
+            Built to present practical AI, automation, backend, and project work in a cleaner,
+            easier-to-review format that stays current as new public repositories are pushed.
           </p>
         </div>
 

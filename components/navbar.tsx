@@ -13,10 +13,10 @@ export function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-slate-950/85 backdrop-blur-xl">
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-slate-950/96 backdrop-blur-xl">
       <div className="mx-auto flex w-full max-w-7xl items-center justify-between gap-6 px-5 py-4 sm:px-8">
         <Link href="/" className="flex items-center gap-3 text-white">
-          <span className="flex h-11 w-11 items-center justify-center rounded-2xl border border-cyan-400/30 bg-cyan-400/10 text-sm font-semibold text-cyan-200 shadow-[0_0_30px_rgba(34,211,238,0.16)]">
+          <span className="flex h-11 w-11 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.03] text-sm font-semibold text-slate-100">
             AD
           </span>
           <span>
@@ -38,7 +38,7 @@ export function Navbar() {
                 className={cn(
                   "rounded-full px-4 py-2 text-sm transition",
                   active
-                    ? "bg-white/10 text-white"
+                    ? "bg-white text-slate-950"
                     : "text-slate-300 hover:bg-white/5 hover:text-white",
                 )}
               >
@@ -51,7 +51,7 @@ export function Navbar() {
         <div className="hidden items-center gap-3 lg:flex">
           <Link
             href="/cv"
-            className="inline-flex items-center gap-2 rounded-full border border-cyan-400/40 bg-cyan-400/10 px-4 py-2 text-sm font-medium text-cyan-100 transition hover:border-cyan-300 hover:bg-cyan-400/15"
+            className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white px-4 py-2 text-sm font-medium text-slate-950 transition hover:bg-slate-200"
           >
             <Download className="h-4 w-4" />
             Download CV
@@ -79,7 +79,7 @@ export function Navbar() {
                 className={cn(
                   "rounded-2xl px-4 py-3 text-sm transition",
                   pathname === link.href
-                    ? "bg-white/10 text-white"
+                    ? "bg-white text-slate-950"
                     : "text-slate-300 hover:bg-white/5 hover:text-white",
                 )}
               >
@@ -89,7 +89,7 @@ export function Navbar() {
             <Link
               href="/cv"
               onClick={() => setOpen(false)}
-              className="mt-2 inline-flex items-center justify-center gap-2 rounded-2xl border border-cyan-400/40 bg-cyan-400/10 px-4 py-3 text-sm font-medium text-cyan-100"
+              className="mt-2 inline-flex items-center justify-center gap-2 rounded-2xl border border-white/10 bg-white px-4 py-3 text-sm font-medium text-slate-950"
             >
               <Download className="h-4 w-4" />
               Download CV

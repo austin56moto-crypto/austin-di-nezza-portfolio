@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { z } from "zod";
 
 import { answerPortfolioQuestion } from "@/lib/chatbot";
+import { getPortfolioProjects } from "@/lib/github";
 
 const chatbotSchema = z.object({
   question: z.string().min(2),
@@ -15,7 +16,7 @@ export async function POST(request: Request) {
     return NextResponse.json({ answer: "Please send a fuller question." }, { status: 400 });
   }
 
-  return NextResponse.json({
-    answer: answerPortfolioQuestion(parsed.data.question),
-  });
+  const projects = await getPortfolioProjects();
+
+  return NextResponse.json(answerPortfolioQuestion(parsed.data.question, projects));
 }
