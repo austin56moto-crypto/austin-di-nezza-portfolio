@@ -12,14 +12,14 @@ export function SkillsGrid() {
         />
         <div className="mt-10 grid gap-4 lg:grid-cols-2">
           {skillGroups.map((group) => (
-            <article key={group.title} className="panel p-6">
-              <h3 className="text-xl font-semibold text-white">{group.title}</h3>
-              <p className="mt-3 text-sm leading-7 text-slate-300">{group.summary}</p>
+            <article key={group.title} className="panel panel-interactive p-6">
+              <h3 className="text-3xl uppercase leading-none text-[var(--foreground)]">{group.title}</h3>
+              <p className="mt-4 text-sm leading-8 text-[var(--muted)]">{group.summary}</p>
               <div className="mt-5 flex flex-wrap gap-2">
                 {group.items.map((item) => (
                   <span
                     key={item}
-                    className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1.5 text-sm text-slate-200"
+                    className="rounded-full border border-[var(--line)] bg-white/[0.03] px-3 py-1.5 text-xs uppercase tracking-[0.12em] text-[var(--muted)]"
                   >
                     {item}
                   </span>

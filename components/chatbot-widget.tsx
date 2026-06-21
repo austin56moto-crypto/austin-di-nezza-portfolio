@@ -52,23 +52,23 @@ export function ChatbotWidget() {
   return (
     <div className="panel p-6">
       <div className="flex items-center gap-3">
-        <div className="flex h-11 w-11 items-center justify-center rounded-2xl border border-white/10 bg-slate-900/80 text-slate-100">
+        <div className="flex h-11 w-11 items-center justify-center rounded-full border border-[var(--line)] bg-white/[0.03] text-[var(--foreground)]">
           <MessageSquare className="h-5 w-5" />
         </div>
         <div>
-          <p className="text-sm font-semibold uppercase tracking-[0.22em] text-slate-300">Portfolio Q&amp;A</p>
-          <p className="text-sm text-slate-400">Short answers about projects, skills, and hiring fit.</p>
+          <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[var(--foreground)]">Portfolio Q&amp;A</p>
+          <p className="text-sm text-[var(--muted)]">Short answers about projects, skills, and hiring fit.</p>
         </div>
       </div>
 
-      <div className="mt-6 rounded-3xl border border-white/10 bg-slate-950/70 p-5">
+      <div className="mt-6 rounded-[1.5rem] border border-[var(--line)] bg-[var(--background)]/60 p-5">
         {lastQuestion ? (
           <div className="mb-3">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-slate-500">Question</p>
-            <p className="mt-2 text-sm font-medium text-white">{lastQuestion}</p>
+            <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[var(--muted)]">Question</p>
+            <p className="mt-2 text-sm font-medium text-[var(--foreground)]">{lastQuestion}</p>
           </div>
         ) : null}
-        <p className="text-sm leading-7 text-slate-200">
+        <p className="text-sm leading-8 text-[var(--muted)]">
           {isPending ? "Checking Austin's CV and live GitHub projects..." : answer}
         </p>
       </div>
@@ -79,7 +79,7 @@ export function ChatbotWidget() {
             key={prompt}
             type="button"
             onClick={() => submitQuestion(prompt)}
-            className="rounded-full border border-white/10 bg-slate-900/80 px-3 py-2 text-xs text-slate-300 transition hover:bg-slate-800 hover:text-white"
+            className="rounded-full border border-[var(--line)] bg-white/[0.03] px-3 py-2 text-xs uppercase tracking-[0.12em] text-[var(--muted)] transition hover:bg-white/[0.08] hover:text-[var(--foreground)]"
           >
             {prompt}
           </button>
@@ -97,12 +97,12 @@ export function ChatbotWidget() {
           value={question}
           onChange={(event) => setQuestion(event.target.value)}
           placeholder="Ask about projects, backend work, or what to review first"
-          className="w-full rounded-full border border-white/10 bg-slate-950 px-5 py-3 text-sm text-white outline-none transition focus:border-slate-300/30"
+          className="w-full rounded-full border border-[var(--line)] bg-[var(--background)] px-5 py-3 text-sm text-[var(--foreground)] outline-none transition focus:border-[rgba(217,191,119,0.4)]"
         />
         <button
           type="submit"
           disabled={isPending}
-          className="inline-flex h-12 items-center justify-center gap-2 rounded-full border border-white/10 bg-slate-900/80 px-4 text-white transition hover:bg-slate-800 disabled:cursor-not-allowed disabled:opacity-60"
+          className="inline-flex h-12 items-center justify-center gap-2 rounded-full border border-[var(--line)] bg-[var(--surface)] px-4 text-[var(--foreground)] transition hover:bg-[var(--surface-strong)] disabled:cursor-not-allowed disabled:opacity-60"
           aria-label="Send question"
         >
           <Send className="h-4 w-4" />

@@ -13,18 +13,18 @@ export default function BlogPage() {
           />
           <div className="mt-10 grid gap-4 lg:grid-cols-3">
             {blogPosts.map((post) => (
-              <article key={post.slug} className="panel p-6">
-                <p className="text-xs uppercase tracking-[0.22em] text-cyan-300">{post.category}</p>
-                <h2 className="mt-4 text-2xl font-semibold text-white">{post.title}</h2>
-                <p className="mt-4 text-sm leading-7 text-slate-300">{post.summary}</p>
-                <div className="mt-6 flex items-center justify-between text-sm text-slate-400">
+              <article key={post.slug} className="panel panel-interactive p-6">
+                <p className="text-xs uppercase tracking-[0.22em] text-[var(--accent-strong)]">{post.category}</p>
+                <h2 className="mt-4 text-3xl uppercase leading-none text-[var(--foreground)]">{post.title}</h2>
+                <p className="mt-4 text-sm leading-8 text-[var(--muted)]">{post.summary}</p>
+                <div className="mt-6 flex items-center justify-between text-sm text-[var(--muted)]">
                   <span>{post.publishedAt}</span>
                   <span>{post.readTime}</span>
                 </div>
                 <div className="mt-6 space-y-3">
                   {post.takeaways.map((takeaway) => (
-                    <div key={takeaway} className="rounded-2xl border border-white/10 bg-slate-900/60 p-4">
-                      <p className="text-sm leading-7 text-slate-200">{takeaway}</p>
+                    <div key={takeaway} className="rounded-[1.25rem] border border-[var(--line)] bg-[var(--background)]/55 p-4">
+                      <p className="text-sm leading-8 text-[var(--muted)]">{takeaway}</p>
                     </div>
                   ))}
                 </div>

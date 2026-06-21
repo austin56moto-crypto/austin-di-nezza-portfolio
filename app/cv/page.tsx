@@ -15,7 +15,7 @@ export default function CvPage() {
           />
           <Link
             href="/documents/Austin-Di-Nezza-CV.pdf"
-            className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-slate-950 transition hover:bg-cyan-100"
+            className="accent-button"
             target="_blank"
           >
             <Download className="h-4 w-4" />

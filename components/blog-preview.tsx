@@ -16,7 +16,7 @@ export function BlogPreview() {
           />
           <Link
             href="/blog"
-            className="inline-flex items-center gap-2 text-sm font-medium text-cyan-200 transition hover:text-white"
+            className="inline-flex items-center gap-2 text-sm uppercase tracking-[0.16em] text-[var(--accent-strong)] transition hover:text-[var(--foreground)]"
           >
             View all articles
             <ArrowUpRight className="h-4 w-4" />
@@ -24,11 +24,11 @@ export function BlogPreview() {
         </div>
         <div className="mt-10 grid gap-4 lg:grid-cols-3">
           {blogPosts.map((post) => (
-            <article key={post.slug} className="panel p-6">
-              <p className="text-xs uppercase tracking-[0.22em] text-cyan-300">{post.category}</p>
-              <h3 className="mt-4 text-2xl font-semibold text-white">{post.title}</h3>
-              <p className="mt-4 text-sm leading-7 text-slate-300">{post.excerpt}</p>
-              <div className="mt-6 flex items-center justify-between text-sm text-slate-400">
+            <article key={post.slug} className="panel panel-interactive p-6">
+              <p className="text-xs uppercase tracking-[0.22em] text-[var(--accent-strong)]">{post.category}</p>
+              <h3 className="mt-4 text-3xl uppercase leading-none text-[var(--foreground)]">{post.title}</h3>
+              <p className="mt-4 text-sm leading-8 text-[var(--muted)]">{post.excerpt}</p>
+              <div className="mt-6 flex items-center justify-between text-sm text-[var(--muted)]">
                 <span>{post.publishedAt}</span>
                 <span>{post.readTime}</span>
               </div>

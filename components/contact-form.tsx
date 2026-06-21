@@ -52,39 +52,39 @@ export function ContactForm() {
       }}
     >
       <div className="grid gap-4 md:grid-cols-2">
-        <label className="space-y-2 text-sm text-slate-200">
+        <label className="space-y-2 text-sm text-[var(--foreground)]">
           <span>Name</span>
           <input
             value={form.name}
             onChange={(event) => setForm({ ...form, name: event.target.value })}
-            className="w-full rounded-2xl border border-white/10 bg-slate-950 px-4 py-3 outline-none transition focus:border-cyan-400/40"
+            className="w-full rounded-[1.25rem] border border-[var(--line)] bg-[var(--background)] px-4 py-3 outline-none transition focus:border-[rgba(217,191,119,0.4)]"
             required
           />
         </label>
-        <label className="space-y-2 text-sm text-slate-200">
+        <label className="space-y-2 text-sm text-[var(--foreground)]">
           <span>Email</span>
           <input
             type="email"
             value={form.email}
             onChange={(event) => setForm({ ...form, email: event.target.value })}
-            className="w-full rounded-2xl border border-white/10 bg-slate-950 px-4 py-3 outline-none transition focus:border-cyan-400/40"
+            className="w-full rounded-[1.25rem] border border-[var(--line)] bg-[var(--background)] px-4 py-3 outline-none transition focus:border-[rgba(217,191,119,0.4)]"
             required
           />
         </label>
-        <label className="space-y-2 text-sm text-slate-200">
+        <label className="space-y-2 text-sm text-[var(--foreground)]">
           <span>Company</span>
           <input
             value={form.company}
             onChange={(event) => setForm({ ...form, company: event.target.value })}
-            className="w-full rounded-2xl border border-white/10 bg-slate-950 px-4 py-3 outline-none transition focus:border-cyan-400/40"
+            className="w-full rounded-[1.25rem] border border-[var(--line)] bg-[var(--background)] px-4 py-3 outline-none transition focus:border-[rgba(217,191,119,0.4)]"
           />
         </label>
-        <label className="space-y-2 text-sm text-slate-200">
+        <label className="space-y-2 text-sm text-[var(--foreground)]">
           <span>Reason</span>
           <select
             value={form.reason}
             onChange={(event) => setForm({ ...form, reason: event.target.value })}
-            className="w-full rounded-2xl border border-white/10 bg-slate-950 px-4 py-3 outline-none transition focus:border-cyan-400/40"
+            className="w-full rounded-[1.25rem] border border-[var(--line)] bg-[var(--background)] px-4 py-3 outline-none transition focus:border-[rgba(217,191,119,0.4)]"
           >
             {reasons.map((reason) => (
               <option key={reason} value={reason}>
@@ -94,30 +94,30 @@ export function ContactForm() {
           </select>
         </label>
       </div>
-      <label className="mt-4 block space-y-2 text-sm text-slate-200">
+      <label className="mt-4 block space-y-2 text-sm text-[var(--foreground)]">
         <span>Message</span>
         <textarea
           value={form.message}
           onChange={(event) => setForm({ ...form, message: event.target.value })}
           rows={6}
-          className="w-full rounded-3xl border border-white/10 bg-slate-950 px-4 py-3 outline-none transition focus:border-cyan-400/40"
+          className="w-full rounded-[1.5rem] border border-[var(--line)] bg-[var(--background)] px-4 py-3 outline-none transition focus:border-[rgba(217,191,119,0.4)]"
           required
         />
       </label>
       <div className="mt-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-        <p className="text-sm text-slate-400">
+        <p className="text-sm leading-7 text-[var(--muted)]">
           Version one validates and logs messages locally through the backend route.
         </p>
         <button
           type="submit"
           disabled={isPending}
-          className="rounded-full bg-white px-6 py-3 text-sm font-semibold text-slate-950 transition hover:bg-cyan-100 disabled:cursor-not-allowed disabled:opacity-60"
+          className="accent-button disabled:cursor-not-allowed disabled:opacity-60"
         >
           {isPending ? "Sending..." : "Send message"}
         </button>
       </div>
       {result ? (
-        <p className="mt-4 rounded-2xl border border-cyan-400/20 bg-cyan-400/10 px-4 py-3 text-sm text-cyan-100">
+        <p className="mt-4 rounded-[1.25rem] border border-[rgba(217,191,119,0.22)] bg-[rgba(217,191,119,0.08)] px-4 py-3 text-sm text-[var(--foreground)]">
           {result}
         </p>
       ) : null}

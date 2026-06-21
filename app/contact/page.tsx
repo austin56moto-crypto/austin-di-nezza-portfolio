@@ -13,23 +13,23 @@ export default function ContactPage() {
             title="For roles, internships, collaborations, or project conversations."
             description="Reach out directly, use the contact form, or ask a quick portfolio question below."
           />
-          <div className="mt-6 panel p-6">
-            <div className="space-y-4 text-sm leading-7 text-slate-300">
+          <div className="mt-6 border-t border-[var(--line)] pt-6">
+            <div className="space-y-4 text-sm leading-8 text-[var(--muted)]">
               <p>
                 Email:{" "}
-                <a href={`mailto:${siteConfig.email}`} className="text-cyan-200">
+                <a href={`mailto:${siteConfig.email}`} className="text-[var(--accent-strong)] transition hover:text-[var(--foreground)]">
                   {siteConfig.email}
                 </a>
               </p>
               <p>
                 LinkedIn:{" "}
-                <a href={siteConfig.linkedin} className="text-cyan-200">
+                <a href={siteConfig.linkedin} className="text-[var(--accent-strong)] transition hover:text-[var(--foreground)]">
                   {siteConfig.linkedin}
                 </a>
               </p>
               <p>
                 GitHub:{" "}
-                <a href={siteConfig.github} className="text-cyan-200">
+                <a href={siteConfig.github} className="text-[var(--accent-strong)] transition hover:text-[var(--foreground)]">
                   {siteConfig.github}
                 </a>
               </p>

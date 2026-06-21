@@ -17,10 +17,10 @@ export function LegalTemplate({ title, summary, sections }: LegalTemplateProps) 
         <div className="mt-10 space-y-6">
           {sections.map((section) => (
             <article key={section.heading} className="panel p-6 sm:p-8">
-              <h2 className="text-2xl font-semibold text-white">{section.heading}</h2>
+              <h2 className="text-3xl uppercase leading-none text-[var(--foreground)]">{section.heading}</h2>
               <div className="mt-4 space-y-4">
                 {section.paragraphs.map((paragraph) => (
-                  <p key={paragraph} className="text-sm leading-8 text-slate-300">
+                  <p key={paragraph} className="text-sm leading-8 text-[var(--muted)]">
                     {paragraph}
                   </p>
                 ))}

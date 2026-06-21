@@ -16,8 +16,8 @@ export default function AboutPage() {
               description="Austin's profile combines technical learning, automation interest, and hands-on experience translating real support and operations needs into structured solutions."
             />
           </div>
-          <div className="panel p-8">
-            <p className="text-sm leading-8 text-slate-200">
+          <div className="border-t border-[var(--line)] pt-6">
+            <p className="text-sm leading-8 text-[var(--muted)]">
               Based in {siteConfig.location}, Austin is currently pursuing Artificial Intelligence studies
               while building projects that reflect backend logic, dashboard thinking, automation, and
               clean product presentation. The portfolio is intentionally positioned to show useful,

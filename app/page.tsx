@@ -60,12 +60,12 @@ export default async function Home() {
               title="A simpler portfolio Q&A for quick hiring questions."
               description="Ask a direct question and get a short answer based on the portfolio, CV, and live GitHub projects."
             />
-            <div className="mt-6 panel p-6">
-              <p className="text-sm leading-7 text-slate-300">
+            <div className="mt-6 border-t border-[var(--line)] pt-6">
+              <p className="text-sm leading-8 text-[var(--muted)]">
                 It is intentionally simple now: quick portfolio answers without the extra AI-demo clutter.
               </p>
-              <p className="mt-4 text-sm leading-7 text-slate-300">
-                Contact email: <span className="text-white">{siteConfig.email}</span>
+              <p className="mt-4 text-sm leading-8 text-[var(--muted)]">
+                Contact email: <span className="text-[var(--foreground)]">{siteConfig.email}</span>
               </p>
             </div>
           </div>

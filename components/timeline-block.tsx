@@ -22,25 +22,25 @@ export function TimelineBlock({
           {items.map((item) => (
             <article
               key={`${"school" in item ? item.school : item.company}-${item.period}`}
-              className="panel p-6"
+              className="panel p-6 sm:p-7"
             >
               <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
                 <div>
-                  <h3 className="text-2xl font-semibold text-white">
+                  <h3 className="text-3xl uppercase leading-none text-[var(--foreground)]">
                     {"role" in item ? item.role : item.program}
                   </h3>
-                  <p className="mt-2 text-sm text-cyan-200">
+                  <p className="mt-3 text-sm text-[var(--accent-strong)]">
                     {"company" in item ? `${item.company} · ${item.location}` : item.school}
                   </p>
                 </div>
-                <span className="rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-sm text-slate-300">
+                <span className="rounded-full border border-[var(--line)] bg-white/[0.03] px-4 py-2 text-xs uppercase tracking-[0.16em] text-[var(--muted)]">
                   {item.period}
                 </span>
               </div>
               <div className="mt-5 grid gap-3">
                 {item.bullets.map((bullet) => (
-                  <div key={bullet} className="rounded-2xl border border-white/10 bg-slate-900/60 p-4">
-                    <p className="text-sm leading-7 text-slate-200">{bullet}</p>
+                  <div key={bullet} className="rounded-[1.25rem] border border-[var(--line)] bg-[var(--background)]/55 p-4">
+                    <p className="text-sm leading-8 text-[var(--muted)]">{bullet}</p>
                   </div>
                 ))}
               </div>

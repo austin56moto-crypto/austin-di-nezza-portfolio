@@ -12,10 +12,10 @@ export function EmployerValueSection() {
         />
         <div className="mt-10 grid gap-4 lg:grid-cols-2">
           {employerLanes.map((lane) => (
-            <article key={lane.title} className="panel p-6">
-              <p className="text-sm uppercase tracking-[0.24em] text-cyan-300">{lane.title}</p>
-              <p className="mt-4 text-lg font-semibold text-white">{lane.summary}</p>
-              <p className="mt-4 text-sm leading-7 text-slate-300">{lane.proof}</p>
+            <article key={lane.title} className="panel panel-interactive p-6">
+              <p className="text-sm uppercase tracking-[0.24em] text-[var(--accent-strong)]">{lane.title}</p>
+              <p className="mt-4 text-2xl uppercase leading-none text-[var(--foreground)]">{lane.summary}</p>
+              <p className="mt-4 text-sm leading-8 text-[var(--muted)]">{lane.proof}</p>
             </article>
           ))}
         </div>

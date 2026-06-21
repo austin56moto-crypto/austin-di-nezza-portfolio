@@ -14,8 +14,8 @@ export default function SkillsPage() {
               description="The skill structure mirrors the kind of work Austin is aiming to do: automation, backend, data, cloud foundations, and employer-ready software presentation."
             />
           </div>
-          <div className="panel p-8">
-            <p className="text-sm leading-8 text-slate-200">
+          <div className="border-t border-[var(--line)] pt-6">
+            <p className="text-sm leading-8 text-[var(--muted)]">
               Instead of presenting a random wall of tools, this page groups the stack by actual use:
               building interfaces, handling data, automating workflows, and supporting backend behavior.
             </p>

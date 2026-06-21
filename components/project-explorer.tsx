@@ -99,28 +99,28 @@ export function ProjectExplorer({
     <section className="px-5 py-16 sm:px-8">
       <div className="mx-auto w-full max-w-7xl">
         <SectionHeading eyebrow="Projects" title={title} description={description} />
-        <div className="mt-8 panel p-5 sm:p-6">
+        <div className="mt-10 panel p-5 sm:p-6">
           <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
-            <div className="flex flex-1 items-center gap-3 rounded-3xl border border-white/10 bg-white/[0.02] px-4 py-3">
-              <Search className="h-4 w-4 text-slate-400" />
+            <div className="flex flex-1 items-center gap-3 rounded-full border border-[var(--line)] bg-white/[0.02] px-4 py-3">
+              <Search className="h-4 w-4 text-[var(--muted)]" />
               <input
                 value={search}
                 onChange={(event) => setSearch(event.target.value)}
                 placeholder="Search repositories, categories, or summaries"
-                className="w-full bg-transparent text-sm text-white outline-none placeholder:text-slate-500"
+                className="w-full bg-transparent text-sm text-[var(--foreground)] outline-none placeholder:text-[var(--muted)]"
               />
             </div>
             <div className="flex flex-wrap gap-3">
-              <div className="inline-flex items-center gap-2 rounded-3xl border border-white/10 bg-white/[0.02] px-4 py-3 text-sm text-slate-300">
-                <SlidersHorizontal className="h-4 w-4 text-slate-300" />
+              <div className="inline-flex items-center gap-2 rounded-full border border-[var(--line)] bg-white/[0.02] px-4 py-3 text-sm text-[var(--muted)]">
+                <SlidersHorizontal className="h-4 w-4 text-[var(--muted)]" />
                 Live sync from GitHub
               </div>
-              <label className="inline-flex items-center gap-2 rounded-3xl border border-white/10 bg-white/[0.02] px-4 py-3 text-sm text-slate-300">
+              <label className="inline-flex items-center gap-2 rounded-full border border-[var(--line)] bg-white/[0.02] px-4 py-3 text-sm text-[var(--muted)]">
                 <input
                   type="checkbox"
                   checked={showForks}
                   onChange={(event) => setShowForks(event.target.checked)}
-                  className="rounded border-white/20 bg-transparent"
+                  className="rounded border-[var(--line)] bg-transparent"
                 />
                 Show forks
               </label>
@@ -131,7 +131,7 @@ export function ProjectExplorer({
             <select
               value={language}
               onChange={(event) => setLanguage(event.target.value)}
-              className="rounded-3xl border border-white/10 bg-slate-950 px-4 py-3 text-sm text-white outline-none"
+              className="rounded-full border border-[var(--line)] bg-[var(--background)] px-4 py-3 text-sm text-[var(--foreground)] outline-none"
             >
               {languages.map((option) => (
                 <option key={option} value={option}>
@@ -142,23 +142,23 @@ export function ProjectExplorer({
             <select
               value={sortBy}
               onChange={(event) => setSortBy(event.target.value)}
-              className="rounded-3xl border border-white/10 bg-slate-950 px-4 py-3 text-sm text-white outline-none"
+              className="rounded-full border border-[var(--line)] bg-[var(--background)] px-4 py-3 text-sm text-[var(--foreground)] outline-none"
             >
               <option value="updated">Recently updated</option>
               <option value="name">Name</option>
               <option value="stars">Stars</option>
             </select>
-            <div className="rounded-3xl border border-white/10 bg-white/[0.02] px-4 py-3 text-sm text-slate-200">
+            <div className="rounded-full border border-[var(--line)] bg-white/[0.02] px-4 py-3 text-sm text-[var(--foreground)]">
               {projects.length} repos available
             </div>
-            <div className="rounded-3xl border border-white/10 bg-white/[0.02] px-4 py-3 text-sm text-slate-200">
+            <div className="rounded-full border border-[var(--line)] bg-white/[0.02] px-4 py-3 text-sm text-[var(--foreground)]">
               {featuredCount} featured · {latestProject ? `updated ${latestProject.displayName}` : "live sync"}
             </div>
           </div>
         </div>
 
         {loading ? (
-          <div className="mt-8 panel flex items-center justify-center gap-3 p-8 text-slate-300">
+          <div className="mt-8 panel flex items-center justify-center gap-3 p-8 text-[var(--muted)]">
             <LoaderCircle className="h-5 w-5 animate-spin" />
             Loading live GitHub projects...
           </div>

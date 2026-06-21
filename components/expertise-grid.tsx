@@ -12,14 +12,14 @@ export function ExpertiseGrid() {
         />
         <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {expertiseCards.map((card) => (
-            <article key={card.title} className="panel p-6">
-              <h3 className="text-xl font-semibold text-white">{card.title}</h3>
-              <p className="mt-3 text-sm leading-7 text-slate-300">{card.summary}</p>
+            <article key={card.title} className="panel panel-interactive p-6">
+              <h3 className="text-3xl uppercase leading-none text-[var(--foreground)]">{card.title}</h3>
+              <p className="mt-4 text-sm leading-8 text-[var(--muted)]">{card.summary}</p>
               <div className="mt-5 flex flex-wrap gap-2">
                 {card.items.map((item) => (
                   <span
                     key={item}
-                    className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1.5 text-xs uppercase tracking-[0.18em] text-slate-300"
+                    className="rounded-full border border-[var(--line)] bg-white/[0.03] px-3 py-1.5 text-xs uppercase tracking-[0.18em] text-[var(--muted)]"
                   >
                     {item}
                   </span>
