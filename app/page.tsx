@@ -1,65 +1,65 @@
-import Image from "next/image";
+import { AboutSnapshot } from "@/components/about-snapshot";
+import { BlogPreview } from "@/components/blog-preview";
+import { ChatbotWidget } from "@/components/chatbot-widget";
+import { EmployerValueSection } from "@/components/employer-value-section";
+import { ExpertiseGrid } from "@/components/expertise-grid";
+import { HeroSection } from "@/components/hero-section";
+import { ProjectExplorer } from "@/components/project-explorer";
+import { SkillsGrid } from "@/components/skills-grid";
+import { StatsStrip } from "@/components/stats-strip";
+import { TimelineBlock } from "@/components/timeline-block";
+import { education, experiences, siteConfig } from "@/data/profile";
+import { SectionHeading } from "@/components/section-heading";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+    <>
+      <HeroSection />
+      <StatsStrip />
+      <AboutSnapshot />
+      <ExpertiseGrid />
+      <EmployerValueSection />
+      <ProjectExplorer
+        compact
+        title="Recent & Featured GitHub Work"
+        description="This homepage project area is backed by the portfolio backend and reflects live public GitHub repositories. Recent pushes can surface here automatically, while curated metadata keeps the presentation employer-friendly."
+      />
+      <SkillsGrid />
+      <section className="px-5 py-16 sm:px-8">
+        <div className="mx-auto grid w-full max-w-7xl gap-6 lg:grid-cols-[0.95fr_1.05fr]">
+          <div>
+            <SectionHeading
+              eyebrow="Ask Austin"
+              title="An AI-style portfolio section that can answer the basics quickly."
+              description="Inspired by the reference site, this gives employers another way to navigate Austin's background, current studies, and strongest project areas."
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+            <div className="mt-6 panel p-6">
+              <p className="text-sm leading-7 text-slate-300">
+                This first version uses a portfolio-specific knowledge base instead of an external LLM.
+                It keeps the responses aligned with the actual CV, project list, and public links while
+                proving the site has real backend behavior.
+              </p>
+              <p className="mt-4 text-sm leading-7 text-slate-300">
+                Contact email: <span className="text-white">{siteConfig.email}</span>
+              </p>
+            </div>
+          </div>
+          <ChatbotWidget />
         </div>
-      </main>
-    </div>
+      </section>
+      <TimelineBlock
+        eyebrow="Experience"
+        title="Professional experience rooted in support, operations, and technical communication."
+        description="That background matters because it makes the software work more user-aware and practical."
+        items={experiences}
+      />
+      <TimelineBlock
+        eyebrow="Education"
+        title="Current AI studies backed by earlier computer science foundations."
+        description="The portfolio is meant to show growth, practical execution, and project quality."
+        items={education}
+      />
+      <BlogPreview />
+    </>
   );
 }

@@ -1,0 +1,34 @@
+import { skillGroups } from "@/data/profile";
+import { SectionHeading } from "@/components/section-heading";
+
+export function SkillsGrid() {
+  return (
+    <section className="px-5 py-16 sm:px-8">
+      <div className="mx-auto w-full max-w-7xl">
+        <SectionHeading
+          eyebrow="Skills"
+          title="Grouped technical skills with an employer-facing structure."
+          description="The goal here is to communicate range without turning the page into a dense list of logos or buzzwords."
+        />
+        <div className="mt-10 grid gap-4 lg:grid-cols-2">
+          {skillGroups.map((group) => (
+            <article key={group.title} className="panel p-6">
+              <h3 className="text-xl font-semibold text-white">{group.title}</h3>
+              <p className="mt-3 text-sm leading-7 text-slate-300">{group.summary}</p>
+              <div className="mt-5 flex flex-wrap gap-2">
+                {group.items.map((item) => (
+                  <span
+                    key={item}
+                    className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1.5 text-sm text-slate-200"
+                  >
+                    {item}
+                  </span>
+                ))}
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}

@@ -1,0 +1,65 @@
+{
+  "bio": [
+    "Austin Di Nezza is an AI and automation-focused developer based in Montreal, Quebec.",
+    "He is currently studying Artificial Intelligence at CDI College and previously studied Computer Sciences at Dawson College.",
+    "His work focuses on practical tools, backend logic, dashboards, chatbots, workflow automation, and user-centered technical solutions."
+  ],
+  "skills": [
+    "Python",
+    "SQL",
+    "PostgreSQL",
+    "Power BI",
+    "n8n",
+    "Prompt engineering",
+    "FastAPI",
+    "React",
+    "Next.js",
+    "AWS foundations",
+    "Microsoft 365 and Copilot tools"
+  ],
+  "projects": [
+    "Smart Reminder Expert System",
+    "IT Incident Expert System",
+    "EDA and Data Cleaning with Codex",
+    "LocalStack Dashboard",
+    "Inventory Manager App",
+    "InternTask AI Cloud"
+  ],
+  "education": [
+    "CDI College - Artificial Intelligence (ACS, in progress)",
+    "Dawson College - Computer Sciences",
+    "Marianopolis College - Law, Society and Justice"
+  ],
+  "experience": [
+    "Customer Support and Technical Solutions Specialist at Tecnico Chauffage",
+    "Customer Support and Operations Associate at Walmart",
+    "Logistics and Operations Assistant at UPS"
+  ],
+  "contact": [
+    "Email: austin.dinezza@icloud.com",
+    "LinkedIn: https://www.linkedin.com/in/austin-di-nezza-8baab0388/",
+    "GitHub: https://github.com/austin56moto-crypto"
+  ],
+  "faq": [
+    {
+      "keywords": ["backend", "api", "fastapi", "server"],
+      "answer": "Yes. Austin has backend-oriented project experience through FastAPI work, expert-system logic, API integrations, and data-driven application structure."
+    },
+    {
+      "keywords": ["bilingual", "language", "english", "french"],
+      "answer": "Austin is bilingual and works in both English and French."
+    },
+    {
+      "keywords": ["study", "studying", "education", "college"],
+      "answer": "Austin is currently studying Artificial Intelligence at CDI College and previously studied Computer Sciences at Dawson College."
+    },
+    {
+      "keywords": ["cloud", "aws", "localstack"],
+      "answer": "Cloud-related work shows up through AWS foundations, LocalStack experimentation, and AI/cloud architecture planning projects."
+    },
+    {
+      "keywords": ["projects", "portfolio", "built"],
+      "answer": "Austin's portfolio includes automation, expert systems, data-cleaning work, dashboard projects, and cloud-oriented builds. The live GitHub section highlights the newest public repositories automatically."
+    }
+  ]
+}

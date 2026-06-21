@@ -1,0 +1,102 @@
+{
+  "inventory-project": {
+    "displayName": "Inventory Manager App",
+    "summary": "Containerized inventory management project that shows backend structure, local setup, and applied full-stack thinking.",
+    "category": "Backend / Operations",
+    "tech": ["Python", "FastAPI", "Streamlit", "Docker", "SQLite"],
+    "featured": true,
+    "priority": 1,
+    "status": "Portfolio Highlight",
+    "employerValue": "Shows application structure, operations thinking, and backend logic tied to a practical business use case."
+  },
+  "Localstack-Dashboard": {
+    "displayName": "LocalStack Dashboard",
+    "summary": "Cloud-oriented dashboard project built around AWS-style local development and infrastructure experimentation.",
+    "category": "Cloud / Dashboard",
+    "tech": ["JavaScript", "LocalStack", "AWS Concepts", "UI"],
+    "featured": true,
+    "priority": 2,
+    "status": "Cloud Showcase",
+    "employerValue": "Shows curiosity around cloud tooling, infrastructure workflows, and practical dashboard presentation."
+  },
+  "htmltailwind": {
+    "displayName": "HTML Tailwind Build",
+    "summary": "Frontend implementation work focused on layout, styling, and clean responsive presentation.",
+    "category": "Frontend",
+    "tech": ["HTML", "Tailwind CSS", "Responsive Design"],
+    "featured": true,
+    "priority": 7,
+    "status": "Frontend Build",
+    "employerValue": "Shows interface polish, styling discipline, and employer-friendly presentation instincts."
+  },
+  "Final-Project-May-": {
+    "displayName": "Final Project May",
+    "summary": "A larger application effort that demonstrates follow-through on end-to-end coursework delivery.",
+    "category": "Application Development",
+    "tech": ["Dart", "Flutter", "Mobile UI"],
+    "featured": true,
+    "priority": 6,
+    "status": "Course Project",
+    "employerValue": "Shows the ability to carry a broader project through implementation in a modern app stack."
+  },
+  "InternTask-AI-Cloud": {
+    "displayName": "InternTask AI Cloud",
+    "summary": "An AI cloud planning project centered on modern service architecture, cloud components, and deployment thinking.",
+    "category": "AI / Cloud",
+    "tech": ["HTML", "AWS", "Architecture Planning", "AI Concepts"],
+    "featured": true,
+    "priority": 5,
+    "status": "Architecture Concept",
+    "employerValue": "Shows cloud architecture thinking and the ability to frame AI systems beyond a single script or page."
+  },
+  "smart-reminder-expert-system": {
+    "displayName": "Smart Reminder Expert System",
+    "summary": "A recurring reminder app with expert-system logic, backend rules, and a polished dashboard-style interface.",
+    "category": "Full Stack / Expert Systems",
+    "tech": ["React", "FastAPI", "SQLite", "Expert Systems"],
+    "featured": true,
+    "priority": 3,
+    "status": "Portfolio Highlight",
+    "employerValue": "Shows backend/frontend coordination, practical AI logic, and product polish for a real utility workflow."
+  },
+  "systeme-expert-incidents-ti": {
+    "displayName": "IT Incident Expert System",
+    "summary": "A Streamlit expert system for triaging and predicting synthetic IT incidents using rule-based logic.",
+    "category": "AI / Decision Support",
+    "tech": ["Python", "Streamlit", "Rule-Based Logic", "Simulation"],
+    "featured": true,
+    "priority": 4,
+    "status": "Applied AI",
+    "employerValue": "Shows explainable AI logic and the ability to structure decision-support tools around real IT-style scenarios."
+  },
+  "eda-et-nettoyage-de-donnees-avec-codex": {
+    "displayName": "EDA & Data Cleaning with Codex",
+    "summary": "Data analysis and cleaning work focused on preparation, insight generation, and polished presentation.",
+    "category": "Data / Analytics",
+    "tech": ["Python", "Pandas", "EDA", "Data Cleaning"],
+    "featured": true,
+    "priority": 8,
+    "status": "Recent Project",
+    "employerValue": "Shows comfort with data preparation, analytical thinking, and turning raw information into usable outputs."
+  },
+  "exam-systemes-experts": {
+    "displayName": "Systems Expert Exam Project",
+    "summary": "Python-based systems expert coursework showing rule handling, logic structure, and academic delivery discipline.",
+    "category": "Python / Expert Systems",
+    "tech": ["Python", "Rule Logic", "CLI"],
+    "featured": false,
+    "priority": 10,
+    "status": "Coursework",
+    "employerValue": "Shows solid fundamentals in logic-driven application design and coursework execution."
+  },
+  "balright": {
+    "displayName": "Balright",
+    "summary": "Mobile-oriented project work that broadens the portfolio beyond backend and web-only implementation.",
+    "category": "Mobile",
+    "tech": ["Dart", "Flutter"],
+    "featured": false,
+    "priority": 9,
+    "status": "Mobile Build",
+    "employerValue": "Shows adaptability across stacks and willingness to build beyond a single technology lane."
+  }
+}
